@@ -1,4 +1,4 @@
-# weather-ssr
+# weather-signage
 
 > Nuxt.js project
 
