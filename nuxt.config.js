@@ -34,6 +34,11 @@ module.exports = {
         })
       }
     }
+  },
+  module: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
   }
 }
 
