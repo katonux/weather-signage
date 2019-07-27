@@ -35,7 +35,7 @@ module.exports = {
       }
     }
   },
-  module: [
+  modules: [
     '@nuxtjs/axios'
   ],
   axios: {
