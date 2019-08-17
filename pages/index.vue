@@ -1,7 +1,10 @@
 <template>
   <section class="container">
-    <div>
-      {{ data }}
+    <div v-for="item in data" :key="item">
+      日時：{{ new Date(item.dt * 1000) }}<br>
+      天気：{{ item.weather[0].main }}<br>
+      気温：{{ Math.round(item.main.temp - 273)}}<br>
+      <br>
     </div>
   </section>
 </template>
@@ -15,7 +18,7 @@ export default {
         console.error('response error', err)
         return false
       })
-    return { data: res }
+    return { data: res.list }
   }
 }
 </script>
