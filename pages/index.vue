@@ -3,7 +3,8 @@
     <div v-for="item in data" :key="item">
       日時：{{ new Date(item.dt * 1000) }}<br>
       天気：{{ item.weather[0].main }}<br>
-      気温：{{ Math.round(item.main.temp - 273)}}<br>
+      気温：{{ (item.main.temp - 273).toFixed(1)}}<br>
+      湿度：{{ item.main.humidity }}%<br>
       <br>
     </div>
   </section>
