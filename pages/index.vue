@@ -6,6 +6,7 @@
       気温：{{ (item.main.temp - 273).toFixed(1) }}<br>
       湿度：{{ item.main.humidity }}%<br>
       風速：{{ item.wind.speed.toFixed(1) }}<br>
+      <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" width=100 height=100>
       <br>
     </div>
   </section>
