@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <b-row>
-      <b-card v-for="item in data" :key="item" class="text-center bg-dark text-light">
+      <div v-for="item in data" :key="item" class="text-center text-white">
         {{ item.dt_txt }}<br >
         <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'"
           width="100"
@@ -13,7 +13,7 @@
         {{ item.main.humidity }}%<br >
         {{ item.wind.speed.toFixed(1) }}m/s<br >
         <br >
-      </b-card>
+      </div>
     </b-row>
   </section>
 </template>
