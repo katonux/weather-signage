@@ -1,14 +1,16 @@
 <template>
   <section class="container">
-    <div v-for="item in data" :key="item">
-      {{ item.dt_txt }}<br>
-      天気：{{ item.weather[0].main }}<br>
-      気温：{{ (item.main.temp - 273).toFixed(1) }}<br>
-      湿度：{{ item.main.humidity }}%<br>
-      風速：{{ item.wind.speed.toFixed(1) }}<br>
-      <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" width=100 height=100>
-      <br>
-    </div>
+    <b-row>
+      <b-card class="text-center" v-for="item in data" :key="item">
+        {{ item.dt_txt }}<br>
+        <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" width=100 height=100><br>
+        {{ item.weather[0].main }}<br>
+        {{ (item.main.temp - 273).toFixed(1) }}°C<br>
+        {{ item.main.humidity }}%<br>
+        {{ item.wind.speed.toFixed(1) }}m/s<br>
+        <br>
+      </b-card>
+    </b-row>
   </section>
 </template>
 
