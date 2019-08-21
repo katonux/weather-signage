@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <b-row>
-      <b-card v-for="item in data" :key="item" class="text-center">
+      <b-card v-for="item in data" :key="item" class="text-center bg-dark text-light">
         {{ item.dt_txt }}<br >
         <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'"
           width="100"
