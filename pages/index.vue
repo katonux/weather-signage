@@ -5,8 +5,7 @@
         {{ item.dt_txt }}<br >
         <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'"
           width="100"
-          height="100"
-        >
+          height="100">
         <br>
         {{ item.weather[0].main }}<br >
         {{ (item.main.temp - 273).toFixed(1) }}°C<br >
