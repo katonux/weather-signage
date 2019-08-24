@@ -40,8 +40,7 @@ module.exports = {
     'bootstrap-vue/nuxt'
   ],
   server: {
-    port: 3000,
-    host: '192.168.1.3'
+    port: 3000
   },
   axios: {
   }
